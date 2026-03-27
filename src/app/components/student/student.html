@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Student List</h2>
+  <div class="row justify-content-center">
+    @for (student of students; track student) {
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img [src]="student.photoUrl" class="card-img-top" alt="{{ student.name }}" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ student.name }}</h5>
+            <p class="card-text">Age: {{ student.age }}</p>
+            <button class="btn btn-primary">View Profile</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
